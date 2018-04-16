@@ -1,0 +1,11 @@
+<h1>add a new task</h1>
+
+<form (submit)="addSubmit()">
+  <label for="task">Task</label>
+  <input type="text" [(ngModel)]="newTask.name" name="taskName"><br>
+  <label for="taskDetail">Detail</label>
+  <input type="text" [(ngModel)]="newTask.detail" name="taskDetail"><br>
+  <button>submit</button>
+</form>
+  <button [routerLink]="['/']">cancel</button>
+

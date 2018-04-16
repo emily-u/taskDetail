@@ -1,0 +1,18 @@
+<a [routerLink]="['add']">Add a task</a>
+
+
+<table style="width:30%">
+  <tr>
+    <th>task</th>
+    <th>detail</th> 
+    <th></th>
+  </tr>
+  <tr *ngFor="let t of tasks">
+    <td>{{t.name}}</td>
+    <td>{{t.detail}}</td> 
+    <td>
+      <a [routerLink]="['/edit', t._id, t.name, t.detail]">Edit</a>
+      <button (click) = "deleteTaskClicked(t._id)">Delete</button>
+    </td>
+  </tr>
+</table>
